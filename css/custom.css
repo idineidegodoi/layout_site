@@ -156,3 +156,18 @@ body{
     color: rgb(221, 221, 212);
     background: none;
 }
+
+/*início da seção serviços*/
+.services{
+    color: white;
+    background-color: #0c0f16;
+    font-family: 'Poppins', sans-serif;
+}
+
+.services .serv-content{
+    display: flex;/*coloca os dados um do lado do outro*/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
