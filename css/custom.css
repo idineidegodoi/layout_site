@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
+*{/*reset de todas as configurações do navegador*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,51 +10,50 @@
 }
 
 body{
-    /*background-color: #0c0f16;*/
     background-color: #9da6bb;
 }
 
 .text-test{
     color: #f6f6f6;
     margin-bottom: 20px;
-    font-family: 'Ubuntu', 'sans-serif';
+    font-family: 'Ubuntu', 'sans-serif';/*utilizando as fontes externas que foram importadas*/
 }
 
 .max-width{
     max-width: 1300px;
-    padding: 0 10px;
+    padding: 0 10px;/*padding nulo para o topo e 10 px para as laterais*/
     margin: auto;
 }
 
 .navbar .logo a{
     color: #547ec7;
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 500;/*grossura da fonte*/
 }
 
 .navbar{
-    position: fixed;
+    position: fixed;/*opção de deixar o menu fixo sem rolar com a página*/
     width: 100%;
-    z-index: 999;
-    padding: 20px 0;
+    z-index: 999;/*mantém o bloco de código com a posição escolhida na hierarquia do código*/
+    padding: 20px 0;/*margem interna no bloco apenas no topo e rodapé de 20px*/
     font-family: 'Ubuntu', sans-serif;
     background-color: #121721;
-    border-bottom: solid #1b202a ;
+    border-bottom: solid #1b202a ;/*borda somente no rodapé*/
 }
 
 .navbar .max-width{
-    display: flex;
+    display: flex;/*coloca os itens do bloco de forma flexível*/
     align-items: center;
     justify-content: space-between;
 }
 
 .navbar .menu li{
-    list-style: none;
-    display: inline-block;
+    list-style: none;/*elimina as bolinhas do menu*/
+    display: inline-block;/*coloca os itens em linha, trabalha em conjunto com a propriedade display: flex*/
 }
 
 .navbar .menu li a{
-    display: block;
+    display: block;/*mantém os elementos no bloco*/
     color: #fff;
     font-size: 18px;
     font-weight: 400;
@@ -64,30 +63,30 @@ body{
 .menu-btn{
     color: #fff;
     font-size: 23px;
-    cursor: pointer;
+    cursor: pointer;/*mostra a mãozinha em cima do ícone visualizando como clicável*/
     display: none;
 }
 
-@media (max-width: 947px){
+@media (max-width: 947px){/*@media é usado para definir as propriedades do mobile*/
     .menu-btn{
         display: block;
         z-index: 999;
     }
 
     .menu-btn i.active:before{
-        content: "\f00d";
+        content: "\f00d";/*é uma propriedade importado dos ícones do site fontawesome (f00d referência ao nome do ícone acompanhado da \ )*/
     }
 
     .navbar .menu{
         background-color: #121721;
         position: fixed;
-        height: 100vh;
+        height: 100vh;/*vh significa o tamanho em relação a viewport(valor de tamanho recebido de uma propriedade superior)*/
         width: 100%;
         left: -100%;
         top: 0;
         text-align: center;
         padding-top: 80px;
-        transition: 0.3s ease;
+        transition: 0.3s ease;/*transição em efeitos de velocidade ao passar o mouse no menu*/
     }
 
     .navbar .menu.active{
@@ -112,7 +111,7 @@ body{
 .top{
     color: white;
     display: flex;
-    background: url("../images/banner_top_v5.jpg") no-repeat center;
+    background: url("../images/banner_top_v5.jpg") no-repeat center;/*chamando a imagem do fundo*/
     height: 100vh;
     min-height: 500px;
     background-size: cover;/*mantém a proporção da imagem cobrindo todo o container*/
@@ -125,7 +124,7 @@ body{
     display: flex; 
 }
 
-.top .top-content .text-1{
+.top .top-content .text-1{/*trabalhando os textos principais do site*/
     font-size: 25px;
 }
 
@@ -148,12 +147,12 @@ body{
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 300;
-    border-radius: 6px;
+    border-radius: 6px;/*arredondando o botão*/
     border: 2px solid #b02ab7;
     transition: 0.3s ease;
 }
 
-.top .top-content a:hover{
+.top .top-content a:hover{/*mudando as características de cor ao passar o mouse sobre o botão*/
     color: rgb(221, 221, 212);
     background: none;
 }
